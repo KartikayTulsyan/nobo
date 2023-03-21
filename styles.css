@@ -1,0 +1,334 @@
+/* @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: url(image/grass_template_2.jpg);
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+
+.hide {
+    display: none;
+}
+
+.restart {
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.563);
+    background-size: cover;
+    padding: 4px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hicoinbox {
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.563);
+    background-size: cover;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.gamecoin {
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.563);
+    background-size: cover;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.hiscorebox {
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.563);
+    background-size: cover;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.score {
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    color: white;
+    background: rgba(0, 0, 0, 0.563);
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.speedbox {
+    font-family: 'New Tegomin', serif;
+    position: absolute;
+    top: 18%;
+    left: 2%;
+    color: white;
+    background: rgb(0, 0, 0);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    line-height: 85px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;  */
+    text-align: center;
+}
+
+.startimage {
+    position: absolute;
+    top: 20%;
+    left: 35vmax;
+    font-family: 'New Tegomin', serif;
+    font-size: 70px;
+    color: rgb(253, 241, 217);
+    text-align: center;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.474);
+    border-radius: 15px;
+}
+
+.startScreen {
+    background: url(image/backstart.jpg);
+    width: 100vmax;
+    height: 99.8vmin;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.startbtn {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background-color: #000000;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 9px;
+    font-size: 20px;
+}
+
+.gameArea {
+    width: 36%;
+    height: 99.7vmin;
+    background: #212628;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-right: 7px dashed rgb(250, 237, 212);
+    border-left: 7px dashed rgb(248, 236, 213);
+}
+
+.car {
+    background: url(image/car4.png);
+    position: relative;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 90px;
+    top: 70%;
+    left: 10%;
+}
+
+.car1 {
+    position: absolute;
+    background: url(image/car1.png);
+}
+
+.car2 {
+    position: absolute;
+    background: url(image/car2.png);
+}
+
+.car3 {
+    position: absolute;
+    background: url(image/car3.png);
+}
+
+.car4 {
+    position: absolute;
+    background: url(image/car4.png);
+}
+
+.car4 {
+    position: absolute;
+    background: url(image/car4.png);
+}
+
+.car5 {
+    position: absolute;
+    background: url(image/car5.png);
+}
+
+.enemy {
+    /* background: url(image/car1.png); */
+    position: absolute;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 90px;
+    top: 600px;
+    left: 190px;
+}
+
+.lines {
+    width: 7px;
+    height: 95px;
+    background: white;
+    position: absolute;
+    margin-left: 49%;
+}
+
+/* doarmon + animation */
+.coin {
+    position: absolute;
+    top: 500px;
+    left: 30px;
+    background: url(image/coinUntitled2.png);
+    width: 27.3px;
+    margin: auto;
+    height: 38px;
+    animation: walky 2s steps(17) infinite;
+    /* forwards 5s linear infinite; */
+}
+
+@keyframes walky {
+    0% {
+        background-position: -1px;
+    }
+
+    100% {
+        background-position: 498px;
+    }
+}
+
+@keyframes forward {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(1500px);
+    }
+}
+
+@media (orientation:portrait) {
+    .startScreen {
+        width: 99.9vmin;
+        height: 99.9vmax;
+    }
+
+    .carGame {
+        font-size: 15px !important;
+    }
+
+    .startimage {
+        top: 20vmax;
+        left: 35vmin;
+        font-size: 36px;
+    }
+
+    .gameArea {
+        width: 60%;
+        height: 77vmax;
+    }
+
+    .startbtn {
+        bottom: 6%;
+        right: 4%;
+        font-size: 19px !important;
+    }
+
+    .car {
+        width: 30px;
+        height: 64px;
+    }
+
+    .enemy {
+        width: 30px;
+        height: 64px;
+    }
+
+    .controlpanel {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 190px;
+        /* display: block; */
+    }
+
+    .d-pad {
+        position: absolute;
+        bottom: 10%;
+        left: 30%;
+        width: 130px;
+        height: 90px;
+        margin: auto;
+        border-radius: 12px;
+    }
+
+    .d-pad button {
+        position: absolute;
+        background: #262626;
+        border: none;
+        width: 32px;
+        height: 32px;
+    }
+
+    .d-pad #up {
+        top: 0;
+        left: calc(50% - 15px);
+        border: solid black 2px;
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .d-pad #right {
+        right: 0;
+        top: calc(50% - 15px);
+        border: solid black 2px;
+        border-left: none;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .d-pad #down {
+        bottom: 0;
+        left: calc(50% - 15px);
+        border: solid black 2px;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .d-pad #left {
+        left: 0;
+        top: calc(50% - 15px);
+        border: solid black 2px;
+        border-right: none;
+        border-radius: 8px 0 0 8px;
+    }
+
+
+    .d-pad button {
+        background: black;
+        color: white;
+    }
+}

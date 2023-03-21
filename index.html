@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil's Drive Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <div class="carGame">
+        <div class="gameArea hide"></div>
+        <div class="gamecoin hide">Coins: </div>
+        <div class="restart" onclick="restart()">Crash Game</div>
+        <div class="hiscorebox"></div>
+        <div class="score"></div>
+        <div class="speedbox"><p id="speedboxp">Speed</p></div>
+        <div class="startScreen">
+            <div id="hicoinbox">$ Coins: </div>
+            <span class="startimage">Evil's Drive</span> 
+            <button class="startbtn">Play</button>
+        </div>
+        <div class='controlpanel hide'>
+            <div class='d-pad'>
+              <button id='up'>&#9650;</button>
+              <button id='right'>&#9658;</button>
+              <button id='down'>&#9660;</button>
+              <button id='left'>&#9668;</button>
+            </div>
+          </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
