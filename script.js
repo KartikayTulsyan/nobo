@@ -16,6 +16,7 @@ if (window.matchMedia("(max-width: 1000px)").matches) {
     const speedbox = document.getElementsByClassName('speedbox')[0];
     const controlpanel = document.querySelector('.controlpanel');
 
+    let i=1;
 
     let keys = { ArrowUp: false, ArrowDown: false, ArrowRight: false, ArrowLeft: false };
 
@@ -159,15 +160,19 @@ if (window.matchMedia("(max-width: 1000px)").matches) {
 
     function upfun(){
         up=true;
+         i=1;
     }
     function downfun(){
         down=true;
+        i=1;
     }
     function leftfun(){
         left=true;
+        i=1;
     }
     function rightfun(){
         right=true;
+        i=1;
     }
 
 
@@ -184,7 +189,9 @@ if (window.matchMedia("(max-width: 1000px)").matches) {
             //all speed control
 
             if ( up==true && player.y > 150) {
-                up = false;
+                i++;
+                if(i>=5){
+                up = false;}
                 if (player.speed < 12) {
                     player.speed += 0.13;
                 }
@@ -208,7 +215,9 @@ if (window.matchMedia("(max-width: 1000px)").matches) {
 
 
             if (down==true) {
-                down=false;
+                i++;
+                if(i>=5){
+                down = false;}
                 //all speed control
                 if (player.speed > 6) {
                     player.speed -= 0.4;
@@ -227,11 +236,15 @@ if (window.matchMedia("(max-width: 1000px)").matches) {
 
             if (left==true && player.x > 2) {
                 player.x -= player.speedumy;
-                left=false;
+                i++;
+                if(i>=8){
+                left = false;}
                 console.log('speeddummy'+player.speedumy)
             }
             if (right==true && player.x < (road.width - 60)) {
-                right=false;
+                i++;
+                if(i>=8){
+                right = false;}
                 player.x += player.speedumy;
             }
             car.style.left = player.x + "px";
